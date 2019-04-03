@@ -1,0 +1,54 @@
+{
+    "name": "elitedevsquad/jeremias",
+    "description": "Converts HTML to PDF files, including urls, files and HTML strings",
+    "keywords": [
+        "elitedevsquad",
+        "jeremias"
+    ],
+    "homepage": "https://github.com/elitedevsquad/jeremias",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Victor da Silva Fonseca Leite",
+            "email": "victorsfleite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elitedevsquad\\Jeremias\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elitedevsquad\\Jeremias\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elitedevsquad\\Jeremias\\JeremiasServiceProvider"
+            ],
+            "aliases": {
+                "Jeremias": "Elitedevsquad\\Jeremias\\JeremiasFacade"
+            }
+        }
+    }
+}
